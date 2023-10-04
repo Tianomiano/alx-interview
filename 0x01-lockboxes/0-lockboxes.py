@@ -1,17 +1,14 @@
 #!/usr/bin/python3
 """
-You have n number of locked boxes in front of you.
-Each box is numbered sequentially
-from 0 to n - 1 and each box may
-contain keys to the other boxes.
+n number of locked boxes.
+the boxes are numbered sequentially from 0 to n - 1
+each box contains keys to the other boxes.
 """
 
 
 def canUnlockAll(boxes):
     """
-     a method that determines if all the boxes can be opened.
-    :param boxes:
-    :return: True or False
+    determine if all the boxes can be opened.
     """
     if not boxes or type(boxes) is not list:
         return False
