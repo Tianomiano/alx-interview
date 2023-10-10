@@ -10,7 +10,7 @@ def minOperations(n):
     """
     factors n and finds the largest factor,
     that can be used to perform Paste operations,
-    continuously reducing n until it reaches 1. 
+    continuously reducing n until it reaches 1.
     """
     operations = 0
     min_operations = 2
