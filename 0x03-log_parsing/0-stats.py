@@ -6,7 +6,8 @@ Script that reads stdin line by line and computes metrics
 import sys
 
 # Initialize variables to store statistics
-cache = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
+cache = {'200': 0, '301': 0, '400': 0, '401': 0,
+         '403': 0, '404': 0, '405': 0, '500': 0}
 total_size = 0
 counter = 0
 
@@ -27,11 +28,9 @@ try:
             for key, value in sorted(cache.items()):
                 if value != 0:
                     print('{}: {}'.format(key, value))
+            print()  # Add an empty line to separate blocks
 
-except Exception as err:
-    pass
-
-finally:
+except KeyboardInterrupt:
     print('File size: {}'.format(total_size))
     for key, value in sorted(cache.items()):
         if value != 0:
