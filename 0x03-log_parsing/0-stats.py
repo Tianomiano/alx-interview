@@ -22,15 +22,16 @@ try:
             counter += 1
 
         if counter == 10:
+            counter = 0
             print('File size: {}'.format(total_size))
             for key, value in sorted(cache.items()):
                 if value != 0:
                     print('{}: {}'.format(key, value))
-            total_size = 0
-            cache = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
-            counter = 0
 
-except KeyboardInterrupt:
+except Exception as err:
+    pass
+
+finally:
     print('File size: {}'.format(total_size))
     for key, value in sorted(cache.items()):
         if value != 0:
